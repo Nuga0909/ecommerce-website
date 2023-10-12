@@ -9,7 +9,7 @@ import logger from "morgan";
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
-import productRouter from "./routes/product.routes";
+import productRouter from "./routes/product.routes.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const envPath = path.resolve(__dirname, '../config/.env');

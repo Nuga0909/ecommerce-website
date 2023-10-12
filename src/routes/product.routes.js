@@ -1,6 +1,6 @@
-import express from express;
+import express from 'express';
 const router = express.Router();
-import Product from '../model/product.model'
+import Product from '../model/product.model.js'
 
 router.get('/all', async(req, res) => {
     try {
