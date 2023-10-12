@@ -9,6 +9,7 @@ import logger from "morgan";
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
+import shoeRouter from './routes/shoes.routes'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const envPath = path.resolve(__dirname, '../config/.env');
@@ -33,6 +34,8 @@ app.use(cookieParser());
 app.use(cors());
 
 app.use(logger('dev'));
+
+app.use("/shoes", shoeRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
