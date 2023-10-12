@@ -21,11 +21,6 @@ const productSchema = new mongoose.Schema(
       type: String,
       require: "Image is required",
     },
-    size: {
-      type: Number,
-      required: true,
-      min: 1,
-    },
     price: {
       type: Number,
       required: true,
