@@ -1,4 +1,8 @@
-import React from 'react'
+import React from 'react';
+import img from '../../assets/Photo5.png';
+import img1 from "../../assets/slider-image-02.webp";
+import img2 from '../../assets/collection_box_img_1.webp'
+
 
 function IntroducingModel() {
   return (
@@ -17,7 +21,7 @@ function IntroducingModel() {
           </div>
           <img
             className="w-[1170px] h-[702px]"
-            src="https://via.placeholder.com/1170x702" alt=''
+            src={img} alt=''
           />
         </div>
         <div className="flex-col justify-start items-start gap-10 flex">
@@ -76,7 +80,7 @@ function IntroducingModel() {
             <div className="w-[770px] h-[922px] relative">
               <img
                 className="w-[770px] h-[922px] left-0 top-0 absolute rounded-2xl"
-                src="https://via.placeholder.com/770x922" alt=''
+                src={img1} alt=''
               />
               <div className="left-[24px] top-[846px] absolute justify-start items-end gap-[276px] inline-flex">
                 <div className="flex-col justify-start items-start gap-2 inline-flex">
@@ -104,7 +108,7 @@ function IntroducingModel() {
             <div className="w-[770px] h-[922px] relative">
               <img
                 className="w-[770px] h-[922px] left-0 top-0 absolute rounded-2xl"
-                src="https://via.placeholder.com/770x922" alt=''
+                src={img2} alt=''
               />
               <div className="left-[24px] top-[846px] absolute justify-start items-end gap-[276px] inline-flex">
                 <div className="flex-col justify-start items-start gap-2 inline-flex">
