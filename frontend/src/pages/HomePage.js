@@ -7,6 +7,7 @@ import TheHype from "../components/Home/TheHype";
 import IntroducingModel from "../components/Home/IntroducingModel";
 import OurStory from "../components/Home/OurStory";
 import Featured from "../components/Home/Featured";
+import OojaEveryday from "../components/Home/OojaEveryday";
 
 function HomePage() {
   return (
@@ -19,6 +20,7 @@ function HomePage() {
       <IntroducingModel />
       <OurStory />
       <Featured />
+      <OojaEveryday />
     </div>
   );
 }
