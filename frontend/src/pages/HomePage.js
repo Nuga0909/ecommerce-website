@@ -8,6 +8,7 @@ import IntroducingModel from "../components/Home/IntroducingModel";
 import OurStory from "../components/Home/OurStory";
 import Featured from "../components/Home/Featured";
 import OojaEveryday from "../components/Home/OojaEveryday";
+import Footer from "../components/Home/Footer";
 
 function HomePage() {
   return (
@@ -21,6 +22,7 @@ function HomePage() {
       <OurStory />
       <Featured />
       <OojaEveryday />
+      <Footer />
     </div>
   );
 }
