@@ -3,6 +3,7 @@ import NavigationBar from "../components/Home/NavigationBar";
 import Hero from "../components/Home/Hero";
 import ContentOne from "../components/Home/ContentOne";
 import ExploreShoes from "../components/Home/ExploreShoes";
+import TheHype from "../components/Home/TheHype";
 
 function HomePage() {
   return (
@@ -11,6 +12,7 @@ function HomePage() {
       <Hero />
       <ContentOne />
       <ExploreShoes />
+      <TheHype/>
     </div>
   );
 }
