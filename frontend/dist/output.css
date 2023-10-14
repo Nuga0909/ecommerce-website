@@ -584,70 +584,268 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.absolute {
+  position: absolute;
 }
 
-.font-bold {
-  font-weight: 700;
+.relative {
+  position: relative;
 }
 
-.underline {
-  text-decoration-line: underline;
+.left-0 {
+  left: 0px;
 }
 
-.App {
-  text-align: center;
+.top-\[1\.38px\] {
+  top: 1.38px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    -webkit-animation: App-logo-spin infinite 20s linear;
-            animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-\[22\.54px\] {
+  height: 22.54px;
+}
+
+.h-\[23\.92px\] {
+  height: 23.92px;
+}
+
+.h-\[46px\] {
+  height: 46px;
+}
+
+.h-\[202\.54px\] {
+  height: 202.54px;
+}
+
+.h-\[203\.92px\] {
+  height: 203.92px;
+}
+
+.h-\[33\.92px\] {
+  height: 33.92px;
+}
+
+.h-\[73\.92px\] {
+  height: 73.92px;
+}
+
+.h-\[53\.92px\] {
+  height: 53.92px;
+}
+
+.h-\[43\.92px\] {
+  height: 43.92px;
+}
+
+.h-\[63\.92px\] {
+  height: 63.92px;
+}
+
+.h-\[83\.92px\] {
+  height: 83.92px;
+}
+
+.w-36 {
+  width: 9rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-\[1440px\] {
+  width: 1440px;
+}
+
+.w-\[34\.08px\] {
+  width: 34.08px;
+}
+
+.w-\[304\.08px\] {
+  width: 304.08px;
+}
+
+.w-\[3rw\] {
+  width: 3rw;
+}
+
+.w-\[3rem\] {
+  width: 3rem;
+}
+
+.w-\[5rem\] {
+  width: 5rem;
+}
+
+.w-\[7rem\] {
+  width: 7rem;
+}
+
+.w-\[100p\] {
+  width: 100p;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[6\] {
+  width: 6;
+}
+
+.w-\[6rem\] {
+  width: 6rem;
+}
+
+.w-\[8rem\] {
+  width: 8rem;
+}
+
+.w-\[10rem\] {
+  width: 10rem;
+}
+
+.w-\[12rem\] {
+  width: 12rem;
+}
+
+.flex-col {
   flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.gap-2 {
+  gap: 0.5rem;
 }
 
-@-webkit-keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.gap-2\.5 {
+  gap: 0.625rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
+.gap-5 {
+  gap: 1.25rem;
+}
 
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-\[195px\] {
+  gap: 195px;
+}
+
+.gap-\[207px\] {
+  gap: 207px;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-green-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(74 222 128 / var(--tw-border-opacity));
+}
+
+.bg-slate-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 6 23 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-2\.5 {
+  padding: 0.625rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-\[11\.04px\] {
+  padding-top: 11.04px;
+  padding-bottom: 11.04px;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.font-\[\'Rubik\'\] {
+  font-family: 'Rubik';
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.leading-snug {
+  line-height: 1.375;
+}
+
+.text-green-400 {
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity));
+}
+
+.text-slate-950 {
+  --tw-text-opacity: 1;
+  color: rgb(2 6 23 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
