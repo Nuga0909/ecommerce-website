@@ -1,8 +1,8 @@
 import React from "react";
 import logo from "../../assets/cover.png";
-import fb from "../../assets/facebook.jpg";
-import insta from "../../assets/instagram.jpg";
-import twit from "../../assets/twitter.jpg";
+import fb from "../../assets/facebook.png";
+import insta from "../../assets/instagram.png";
+import twit from "../../assets/twitter.png";
 
 function Footer() {
   return (
