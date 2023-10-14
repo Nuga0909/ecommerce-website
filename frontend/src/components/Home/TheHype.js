@@ -6,7 +6,7 @@ function TheHype() {
       <div className="justify-start items-start gap-[30px] inline-flex">
         <div className="pr-6 pt-20 bg-zinc-100 rounded-2xl flex-col justify-start items-start gap-2.5 inline-flex">
           <div className="flex-col justify-start items-center gap-10 flex">
-            <div className="w-[690px] text-center text-slate-950 text-[56px] font-bold font-['Noto Serif Lao'] leading-[64px]">
+            <div className="w-[690px] text-center text-slate-950 text-[56px] font-bold font-['Noto Serif'] leading-[64px]">
               The Hype is real...
             </div>
             <div className="justify-start items-center gap-6 inline-flex">
@@ -27,7 +27,7 @@ function TheHype() {
                     <div className="w-5 h-5 relative" />
                   </div>
                 </div>
-                <div className="w-[313px] text-center text-slate-950 text-[28px] font-bold font-['Noto Serif Lao'] leading-loose">
+                <div className="w-[313px] text-center text-slate-950 text-[28px] font-bold font-['Noto Serif'] leading-loose">
                   These stylishly simple and incredibly comfortable shoes have
                   become such a staple in my daily wardrobe that I'm already
                   buying a second pair.

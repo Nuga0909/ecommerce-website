@@ -16,7 +16,7 @@ function Featured() {
                   Featured
                 </div>
               </div>
-              <div className="w-[363px] text-center text-white text-[56px] font-bold font-['Noto Serif Lao'] leading-[64px]">
+              <div className="w-[363px] text-center text-white text-[56px] font-bold font-['Noto Serif'] leading-[64px]">
                 HUMANS OF NEW YOUK
               </div>
             </div>

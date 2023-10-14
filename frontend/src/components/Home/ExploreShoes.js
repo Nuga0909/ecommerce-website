@@ -5,7 +5,7 @@ function ExploreShoes() {
     <div className="w-[1440px] h-[1346px] px-[135px] py-20 bg-white justify-start items-start gap-2.5 inline-flex">
       <div className="flex-col justify-start items-center gap-8 inline-flex">
         <div className="justify-start items-center gap-[700px] inline-flex">
-          <div className="w-[370px] text-slate-950 text-[28px] font-bold font-['Noto Serif Lao'] leading-loose">
+          <div className="w-[370px] text-slate-950 text-[28px] font-bold font-['Noto Serif'] leading-loose">
             Explore Model 000
           </div>
           <div className="w-[100px] text-right text-slate-950 text-base font-normal font-['Rubik'] underline leading-snug">

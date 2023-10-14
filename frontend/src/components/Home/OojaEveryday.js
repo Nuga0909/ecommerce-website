@@ -5,7 +5,7 @@ function OojaEveryday() {
     <div className="w-[1440px] h-[609px] px-[135px] py-20 bg-white flex-col justify-start items-start gap-2.5 inline-flex">
       <div className="flex-col justify-start items-center gap-10 flex">
         <div className="flex-col justify-start items-center gap-6 flex">
-          <div className="text-center text-slate-950 text-5xl font-bold font-['Noto Serif Lao'] leading-[56px]">
+          <div className="text-center text-slate-950 text-5xl font-bold font-['Noto Serif'] leading-[56px]">
             Ooja in Everyday
           </div>
           <div className="text-center text-slate-950 text-lg font-normal font-['Rubik'] leading-snug">

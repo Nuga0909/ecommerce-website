@@ -11,7 +11,7 @@ function Hero() {
         />
         <div className="w-[1090px] h-[346px] left-[40px] top-[309px] absolute flex-col justify-start items-center gap-4 inline-flex">
           <div className="flex-col justify-start items-start gap-10 flex">
-            <div className="w-[1090px] text-white text-[66px] font-bold font-['Noto Serif Lao'] leading-[74px]">
+            <div className="w-[1090px] text-white text-[66px] font-bold font-['Noto Serif'] leading-[74px]">
               Step inside, for <br />
               comfort and magic <br />
               await you.

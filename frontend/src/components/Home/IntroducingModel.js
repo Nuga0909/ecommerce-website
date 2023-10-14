@@ -11,7 +11,7 @@ function IntroducingModel() {
                 New
               </div>
             </div>
-            <div className="w-[1170px] text-center text-white text-7xl font-bold font-['Noto Serif Lao'] leading-[80px]">
+            <div className="w-[1170px] text-center text-white text-7xl font-bold font-['Noto Serif'] leading-[80px]">
               Introducing Model 001
             </div>
           </div>
@@ -21,7 +21,7 @@ function IntroducingModel() {
           />
         </div>
         <div className="flex-col justify-start items-start gap-10 flex">
-          <div className="w-[1170px] text-white text-[28px] font-bold font-['Noto Serif Lao'] leading-loose">
+          <div className="w-[1170px] text-white text-[28px] font-bold font-['Noto Serif'] leading-loose">
             Explore Model 001
           </div>
           <div className="justify-start items-start gap-[30px] inline-flex">

@@ -16,7 +16,7 @@ function OurStory() {
                   Our Story
                 </div>
               </div>
-              <div className="w-[363px] text-center text-white text-[56px] font-bold font-['Noto Serif Lao'] leading-[64px]">
+              <div className="w-[363px] text-center text-white text-[56px] font-bold font-['Noto Serif'] leading-[64px]">
                 Ooja
                 <br />
               </div>
@@ -24,7 +24,7 @@ function OurStory() {
           </div>
         </div>
         <div className="flex-col justify-start items-center gap-6 inline-flex">
-          <div className="w-[357px] h-[222px] text-center text-slate-950 text-2xl font-bold font-['Noto Serif Lao'] leading-7">
+          <div className="w-[357px] h-[222px] text-center text-slate-950 text-2xl font-bold font-['Noto Serif'] leading-7">
             Ooja <br />
             was born out of a simple yet powerful concept - creating a shoe that
             you would choose to wear every single day, and they've brought this
