@@ -5,6 +5,7 @@ import ContentOne from "../components/Home/ContentOne";
 import ExploreShoes from "../components/Home/ExploreShoes";
 import TheHype from "../components/Home/TheHype";
 import IntroducingModel from "../components/Home/IntroducingModel";
+import OurStory from "../components/Home/OurStory";
 
 function HomePage() {
   return (
@@ -14,7 +15,8 @@ function HomePage() {
       <ContentOne />
       <ExploreShoes />
       <TheHype />
-      <IntroducingModel/>
+      <IntroducingModel />
+      <OurStory />
     </div>
   );
 }
