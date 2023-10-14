@@ -6,6 +6,7 @@ import ExploreShoes from "../components/Home/ExploreShoes";
 import TheHype from "../components/Home/TheHype";
 import IntroducingModel from "../components/Home/IntroducingModel";
 import OurStory from "../components/Home/OurStory";
+import Featured from "../components/Home/Featured";
 
 function HomePage() {
   return (
@@ -17,6 +18,7 @@ function HomePage() {
       <TheHype />
       <IntroducingModel />
       <OurStory />
+      <Featured />
     </div>
   );
 }
