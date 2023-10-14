@@ -1,4 +1,8 @@
-import React from 'react'
+import React from 'react';
+import img1 from '../../assets/Photo4.png';
+import img2 from "../../assets/Photo(2).png";
+import img3 from "../../assets/banner-02.webp";
+import img4 from "../../assets/Photo3.png";
 
 function OojaEveryday() {
   return (
@@ -13,22 +17,10 @@ function OojaEveryday() {
           </div>
         </div>
         <div className="justify-start items-start gap-[30px] inline-flex">
-          <img
-            className="w-[270px] h-[307px] rounded-2xl"
-            src="https://via.placeholder.com/270x307" alt=''
-          />
-          <img
-            className="w-[270px] h-[307px] rounded-2xl"
-            src="https://via.placeholder.com/270x307" alt=''
-          />
-          <img
-            className="w-[270px] h-[307px] rounded-2xl"
-            src="https://via.placeholder.com/270x307" alt=''
-          />
-          <img
-            className="w-[270px] h-[307px] rounded-2xl"
-            src="https://via.placeholder.com/270x307" alt=''
-          />
+          <img className="w-[270px] h-[307px] rounded-2xl" src={img1} alt="" />
+          <img className="w-[270px] h-[307px] rounded-2xl" src={img2} alt="" />
+          <img className="w-[270px] h-[307px] rounded-2xl" src={img3} alt="" />
+          <img className="w-[270px] h-[307px] rounded-2xl" src={img4} alt="" />
         </div>
       </div>
     </div>

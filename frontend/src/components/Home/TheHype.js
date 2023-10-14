@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import bag1 from '../../assets/bag1.webp'
 
 function TheHype() {
   return (
@@ -12,7 +13,7 @@ function TheHype() {
             <div className="justify-start items-center gap-6 inline-flex">
               <img
                 className="w-[409px] h-[449px] rounded-2xl"
-                src="https://via.placeholder.com/409x449" alt=''
+                src={bag1} alt=''
               />
               <div className="flex-col justify-start items-center gap-6 inline-flex">
                 <div className="justify-start items-center gap-3 inline-flex">
@@ -28,9 +29,9 @@ function TheHype() {
                   </div>
                 </div>
                 <div className="w-[313px] text-center text-slate-950 text-[28px] font-bold font-['Noto Serif'] leading-loose">
-                  These stylishly simple and incredibly comfortable shoes have
+                  These stylishly simple and incredibly comfortable bags have
                   become such a staple in my daily wardrobe that I'm already
-                  buying a second pair.
+                  buying a second one.
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import pic from '../../assets/Photo.png'
 
 function OurStory() {
   return (
@@ -7,7 +8,7 @@ function OurStory() {
         <div className="justify-start items-start flex">
           <img
             className="w-[370px] h-[531px] rounded-tl-2xl rounded-bl-2xl"
-            src="https://via.placeholder.com/370x531" alt=''
+            src={pic} alt=''
           />
           <div className="h-[531px] px-6 py-[182px] bg-slate-950 flex-col justify-center items-center gap-2.5 inline-flex">
             <div className="flex-col justify-center items-center gap-10 flex">
