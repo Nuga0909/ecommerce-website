@@ -1,12 +1,15 @@
+/* eslint-disable no-unused-vars */
 import './App.css';
 import HomePage from './pages/HomePage';
-import ProductPreview from './pages/ProductPreview';
+import ProductPreview from './pages/ProductPreviewPage';
+import SignIn from './pages/SignInPage';
 
 function App() {
   return (
     <div>
-      {/* <HomePage /> */}
-      <ProductPreview/>
+      {/* <HomePage />
+      <ProductPreview /> */}
+      <SignIn />
     </div>
   );
 }
