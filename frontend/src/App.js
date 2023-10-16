@@ -3,15 +3,17 @@ import './App.css';
 import CreateAccountPage from './pages/CreateAccountPage';
 import HomePage from './pages/HomePage';
 import ProductPreview from './pages/ProductPreviewPage';
+import ShoesPage from './pages/ShoesPage';
 import SignIn from './pages/SignInPage';
 
 function App() {
   return (
     <div>
-      <HomePage />
-      {/* <ProductPreview />
+      {/* <HomePage />
+      <ProductPreview />
       <SignIn />
       <CreateAccountPage /> */}
+      <ShoesPage />
     </div>
   );
 }
