@@ -8,10 +8,10 @@ import SignIn from './pages/SignInPage';
 function App() {
   return (
     <div>
-      {/* <HomePage />
-      <ProductPreview /> */}
-      {/* <SignIn /> */}
-      <CreateAccountPage />
+      <HomePage />
+      {/* <ProductPreview />
+      <SignIn />
+      <CreateAccountPage /> */}
     </div>
   );
 }
