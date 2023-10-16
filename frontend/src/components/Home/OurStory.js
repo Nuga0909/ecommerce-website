@@ -30,7 +30,7 @@ function OurStory() {
             was born out of a simple yet powerful concept - creating a shoe that
             you would choose to wear every single day, and they've brought this
             idea to life in the bustling city of <br />
-            New York.
+            Lagos.
           </div>
           <div className="px-6 py-[17px] bg-slate-950 rounded-[32px] justify-center items-start gap-2.5 inline-flex">
             <div className="w-[133px] text-center text-white text-base font-normal font-['Rubik'] leading-snug">

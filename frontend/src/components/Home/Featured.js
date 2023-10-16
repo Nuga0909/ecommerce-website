@@ -1,5 +1,5 @@
 import React from 'react';
-import pic from '../../assets/Photo(1).png'
+import pic from '../../assets/fggg.jpg'
 
 function Featured() {
   return (
@@ -18,7 +18,7 @@ function Featured() {
                 </div>
               </div>
               <div className="w-[363px] text-center text-white text-[56px] font-bold font-['Noto Serif'] leading-[64px]">
-                HUMANS OF NEW YOUK
+                HUMANS OF LAGOS CITY
               </div>
             </div>
           </div>
