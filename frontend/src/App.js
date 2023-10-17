@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import ProductPreview from './pages/ProductPreviewPage';
 import MenPage from './pages/MenPage';
 import SignIn from './pages/SignInPage';
+import CartPage from './pages/CartPage';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       {/* <HomePage /> */}
       {/* <ProductPreview /> */}
       {/* <SignIn /> */}
-      <CreateAccountPage />
+      {/* <CreateAccountPage /> */}
       {/* <MenPage /> */}
+      <CartPage />
     </div>
   );
 }
