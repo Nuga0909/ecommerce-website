@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ShoeCard() {
+function MenCard() {
   return (
     <div className="w-[270px] h-[463px] rounded-2xl flex-col justify-start items-start gap-6 inline-flex">
       <img
@@ -21,4 +21,4 @@ function ShoeCard() {
   );
 }
 
-export default ShoeCard
+export default MenCard;

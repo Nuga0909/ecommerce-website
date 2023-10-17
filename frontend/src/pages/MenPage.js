@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationBar from "../components/Home/NavigationBar";
 
-function ShoesPage() {
+function MenPage() {
   return (
     <>
       <NavigationBar />
@@ -27,4 +27,4 @@ function ShoesPage() {
   );
 }
 
-export default ShoesPage;
+export default MenPage;
