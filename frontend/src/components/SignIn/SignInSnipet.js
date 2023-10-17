@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function SignInSnipet() {
   return (
@@ -25,7 +26,9 @@ function SignInSnipet() {
               New to Ooja?
             </div>
             <div className="text-center text-slate-950 text-base font-normal font-['Rubik'] underline leading-snug">
-              Create an account
+              <Link className="create-account" to="/create-account">
+                Create an account
+              </Link>
             </div>
           </div>
         </div>

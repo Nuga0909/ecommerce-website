@@ -4,7 +4,7 @@ import NavigationBar from "../components/Home/NavigationBar";
 function MenPage() {
   return (
     <>
-      <NavigationBar />
+      {/* <NavigationBar /> */}
       <div className="w-[1440px] h-[649px] px-[435px] py-8 bg-zinc-100 justify-start items-start gap-2.5 inline-flex">
         <div className="flex-col justify-start items-center gap-[60px] inline-flex">
           <div className="justify-start items-start gap-[30px] inline-flex">

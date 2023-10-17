@@ -5,6 +5,7 @@ import Footer from "../components/Home/Footer";
 import HomePage from "../pages/HomePage";
 import MenPage from "../pages/MenPage";
 import SignIn from "../pages/SignInPage";
+import CreateAccountPage from "../pages/CreateAccountPage";
 
 function AppRouter() {
   return (
@@ -15,6 +16,7 @@ function AppRouter() {
           <Route path="/" element={<HomePage />} />
           <Route path="/men" element={<MenPage />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/create-account" element={<CreateAccountPage />} />
           <Route path="*" element={() => "404 NOT FOUND"} />
         </Routes>
         <Footer />

@@ -26,7 +26,9 @@ function NavigationBar() {
             <div className="w-36 h-[46px] py-[11.04px] justify-center items-center flex">
               <div className="w-36 h-[83.92px] relative">
                 <div className="w-[12rem] h-[22.54px] left-0 top-[1.38px] absolute">
-                  <img src={logo} alt="" />
+                  <Link to="/">
+                    <img src={logo} alt="" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -37,9 +39,7 @@ function NavigationBar() {
                 </Link>
               </div>
               <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-                <Link className="women" to="/women">
-                  Women
-                </Link>
+                Bags
               </div>
               <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
                 Accessories
@@ -59,10 +59,9 @@ function NavigationBar() {
               Support
             </div>
             <div className="w-6 h-6 relative">
-              <Link className="signin" to="/signin">
+              <Link to="/signin">
                 <img src={user} alt="" />
               </Link>
-              
             </div>
             <div className="w-6 h-6 relative">
               <img src={cart} alt="" onClick={handleShowCart} />

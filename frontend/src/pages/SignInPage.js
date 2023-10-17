@@ -6,9 +6,7 @@ import SignInSnipet from '../components/SignIn/SignInSnipet'
 function SignIn() {
   return (
     <div>
-      <NavigationBar />
       <SignInSnipet />
-      <Footer />
     </div>
   )
 }

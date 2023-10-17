@@ -6,11 +6,13 @@ import ProductPreview from './pages/ProductPreviewPage';
 import MenPage from './pages/MenPage';
 import SignIn from './pages/SignInPage';
 import CartPage from './pages/CartPage';
+import AppRouter from './routes/AppRouter';
 
 function App() {
   return (
     <div>
-      <HomePage />
+      <AppRouter/>
+      {/* <HomePage /> */}
       {/* <ProductPreview /> */}
       {/* <SignIn /> */}
       {/* <CreateAccountPage /> */}

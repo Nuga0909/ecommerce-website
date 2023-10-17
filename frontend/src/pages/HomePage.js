@@ -13,7 +13,6 @@ import Footer from "../components/Home/Footer";
 function HomePage() {
   return (
     <div>
-      <NavigationBar />
       <Hero />
       <ContentOne />
       <ExploreShoes />
@@ -22,7 +21,6 @@ function HomePage() {
       <OurStory />
       <Featured />
       <OojaEveryday />
-      <Footer />
     </div>
   );
 }
