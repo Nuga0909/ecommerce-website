@@ -10,12 +10,12 @@ import CartPage from './pages/CartPage';
 function App() {
   return (
     <div>
-      {/* <HomePage /> */}
+      <HomePage />
       {/* <ProductPreview /> */}
       {/* <SignIn /> */}
       {/* <CreateAccountPage /> */}
       {/* <MenPage /> */}
-      <CartPage />
+      {/* <CartPage /> */}
     </div>
   );
 }

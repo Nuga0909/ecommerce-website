@@ -1,9 +1,18 @@
-import React from 'react';
-import logo from '../../assets/cover.png';
-import cart from '../../assets/shopping-bag.jpg';
-import user from '../../assets/user.jpg'
+import React from "react";
+import logo from "../../assets/cover.png";
+import cart from "../../assets/shopping-bag.jpg";
+import user from "../../assets/user.jpg";
+import { useState } from "react";
+import CartPage from "../../pages/CartPage";
+import { Link } from "react-router-dom";
 
 function NavigationBar() {
+  const [showCart, setShowCart] = useState(false);
+
+  function handleShowCart() {
+    setShowCart(!showCart);
+  }
+
   return (
     <div className="w-[1440px] h-32 pb-5 bg-white flex-col justify-start items-start gap-2.5 inline-flex">
       <div className="flex-col justify-start items-center gap-5 flex">
@@ -23,10 +32,14 @@ function NavigationBar() {
             </div>
             <div className="justify-start items-center gap-6 flex">
               <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-                Shoes
+                <Link className="men" to="/men">
+                  Men
+                </Link>
               </div>
               <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-                Bags
+                <Link className="women" to="/women">
+                  Women
+                </Link>
               </div>
               <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
                 Accessories
@@ -46,16 +59,20 @@ function NavigationBar() {
               Support
             </div>
             <div className="w-6 h-6 relative">
-              <img src={user} alt="" />
+              <Link className="signin" to="/signin">
+                <img src={user} alt="" />
+              </Link>
+              
             </div>
             <div className="w-6 h-6 relative">
-              <img src={cart} alt="" />
+              <img src={cart} alt="" onClick={handleShowCart} />
             </div>
           </div>
         </div>
+        {showCart && <CartPage />}
       </div>
     </div>
   );
 }
 
-export default NavigationBar
+export default NavigationBar;

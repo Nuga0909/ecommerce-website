@@ -6,7 +6,7 @@ import trash from "../assets/cart/trash-2.svg";
 
 function CartPage() {
   return (
-    <div className="w-[605px] h-[1024px] px-10 pt-8 pb-20 bg-white justify-start items-start gap-2.5 inline-flex">
+    <div className="absolute w-[605px] h-[1024px] px-10 pt-8 pb-20 bg-white justify-start items-start gap-2.5 inline-flex z-50">
       <div className="flex-col justify-start items-start gap-[428px] inline-flex">
         <div className="flex-col justify-start items-start gap-8 flex">
           <div className="flex-col justify-start items-start gap-6 flex">
@@ -71,8 +71,9 @@ function CartPage() {
                 </div>
                 <div className="w-[46px] h-[46px] relative">
                   <div className="w-[46px] h-[46px] left-0 top-0 absolute bg-white rounded-full border border-gray-200" />
-                  <div className="w-5 h-5 left-[13px] top-[13px] absolute" ><img src={trash} alt="" />
-                    </div>
+                  <div className="w-5 h-5 left-[13px] top-[13px] absolute">
+                    <img src={trash} alt="" />
+                  </div>
                 </div>
               </div>
             </div>
