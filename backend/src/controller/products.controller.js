@@ -56,7 +56,7 @@ export const postProduct = async (req, res) => {
       category: req.body.category,
       brand: req.body.brand,
       model: req.body.model,
-      image: req.body.image,
+      image: req.file.filename, // this line is to get filename from multer's output
       price: req.body.price,
       inStock: req.body.inStock,
       description: req.body.description,

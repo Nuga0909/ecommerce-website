@@ -6,6 +6,6 @@ router.get('/all', getAllProducts);
 
 router.get('/single/:id', getSingleProduct);
 
-router.post('/post-product', postProduct);
+router.post("/post-product", upload.single("image"), postProduct);
 
 export default router;
