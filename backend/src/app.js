@@ -1,6 +1,5 @@
 import express from "express";
 const app = express();
-import multer from "multer";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -26,19 +25,6 @@ mongoose.connect(URI, {
 }).catch(error => {
     console.error("MongoDB connection error:", error);
 });
-
-// use multer
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "uploads/");
-  },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + "-" + file.originalname);
-  },
-});
-
-const upload = multer({ storage: storage });
-
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
