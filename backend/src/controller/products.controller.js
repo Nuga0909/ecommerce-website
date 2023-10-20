@@ -1,4 +1,6 @@
 import Product from "../model/product.model.js";
+import { validationResult } from "express-validator";
+import sanitizeHtml from "sanitize-html";
 
 export const getAllProducts = async (req, res) => {
   try {
@@ -51,15 +53,23 @@ export const getSingleProduct = async (req, res) => {
 };
 
 export const postProduct = async (req, res) => {
+  // Validate and sanitize input
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
+  const sanitizedDescription = sanitizeHtml(req.body.description);
+
   try {
     const product = new Product({
       category: req.body.category,
       brand: req.body.brand,
       model: req.body.model,
-      image: req.file.filename, // this line is to get filename from multer's output
+      image: req.file.location, // This line is changed to use file location from S3
       price: req.body.price,
       inStock: req.body.inStock,
-      description: req.body.description,
+      description: sanitizedDescription,
     });
 
     await product.save();
