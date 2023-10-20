@@ -7,7 +7,7 @@ import { check, validationResult } from "express-validator";
 
 const router = express.Router();
 const s3 = new aws.S3({
-  /* your AWS S3 config here */
+  region: process.env.AWS_REGION,
 });
 
 const upload = multer({
