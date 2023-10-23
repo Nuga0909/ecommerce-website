@@ -4,6 +4,8 @@ import {
   getAllProducts,
   getSingleProduct,
   postProduct,
+  updateProduct,
+  deleteProduct
 } from "../controller/products.controller.js";
 import multer from "multer";
 import path from "path";
@@ -27,6 +29,10 @@ router.get("/all", getAllProducts);
 router.get("/single/:id", getSingleProduct);
 
 router.post("/post-product", upload.single("image"), postProduct);
+
+router.put("/edit-product/:id", upload.single("image"), updateProduct);
+
+router.delete("/delete-product/:id", deleteProduct);
 
 router.use((err, req, res, next) => {
   if (err instanceof multer.MulterError) {
