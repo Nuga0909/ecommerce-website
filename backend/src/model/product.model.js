@@ -7,10 +7,9 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: "Category is required",
     },
-    brand: {
+    productName: {
       type: String,
       required: true,
-      trim: true,
     },
     image: {
       type: String,

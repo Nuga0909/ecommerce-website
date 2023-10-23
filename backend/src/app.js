@@ -10,6 +10,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import productRouter from "./routes/product.routes.js";
+import userRouter from "./routes/user.routes.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const envPath = path.resolve(__dirname, '../config/.env');
@@ -40,6 +41,7 @@ app.use(cors({
 app.use(logger('dev'));
 
 app.use("/products", productRouter);
+app.use("/users", userRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello World!');

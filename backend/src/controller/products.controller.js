@@ -1,5 +1,5 @@
 import Product from "../model/product.model.js";
-import { validationResult } from "express-validator";
+import { productValidationSchema } from "../validation/productValidation.js";
 import sanitizeHtml from "sanitize-html";
 
 export const getAllProducts = async (req, res) => {
@@ -53,10 +53,10 @@ export const getSingleProduct = async (req, res) => {
 };
 
 export const postProduct = async (req, res) => {
-  // Validate and sanitize input
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
+  // Validate using Joi
+  const { error } = productValidationSchema.validate(req.body);
+  if (error) {
+    return res.status(400).json({ error: error.details[0].message });
   }
 
   const sanitizedDescription = sanitizeHtml(req.body.description);
@@ -64,9 +64,8 @@ export const postProduct = async (req, res) => {
   try {
     const product = new Product({
       category: req.body.category,
-      brand: req.body.brand,
-      model: req.body.model,
-      image: req.file.location, // This line is changed to use file location from S3
+      productName: req.body.productName,
+      image: req.file.location,
       price: req.body.price,
       inStock: req.body.inStock,
       description: sanitizedDescription,
@@ -82,6 +81,68 @@ export const postProduct = async (req, res) => {
     console.error("Error saving product:", error);
     res.status(500).json({
       error: "Failed to register product",
+      details: error.message,
+    });
+  }
+};
+
+export const updateProduct = async (req, res) => {
+  // Validate using Joi
+  const { error } = productValidationSchema.validate(req.body);
+  if (error) {
+    return res.status(400).json({ error: error.details[0].message });
+  }
+
+  const sanitizedDescription = sanitizeHtml(req.body.description);
+
+  try {
+    const product = await Product.findById(req.params.id);
+    if (!product) {
+      return res.status(404).json({
+        message: "No product found with the provided ID",
+        status: "failed",
+      });
+    }
+
+    product.category = req.body.category;
+    product.productName = req.body.productName;
+    product.image = req.file.location;
+    product.price = req.body.price;
+    product.inStock = req.body.inStock;
+    product.description = sanitizedDescription;
+
+    await product.save();
+    res.status(200).json({
+      message: "Product updated successfully",
+      data: product,
+    });
+  } catch (error) {
+    console.error("Error updating product:", error);
+    res.status(500).json({
+      error: "Failed to update product",
+      details: error.message,
+    });
+  }
+};
+
+export const deleteProduct = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    if (!product) {
+      return res.status(404).json({
+        message: "No product found with the provided ID",
+        status: "failed",
+      });
+    }
+
+    await Product.deleteOne({ _id: req.params.id });
+    res.status(200).json({
+      message: "Product deleted successfully",
+    });
+  } catch (error) {
+    console.error("Error deleting product:", error);
+    res.status(500).json({
+      error: "Failed to delete product",
       details: error.message,
     });
   }
