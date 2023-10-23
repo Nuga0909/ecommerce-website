@@ -11,31 +11,16 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: "lastName is required",
     },
-    userName: {
+    emailAddress: {
       type: String,
-      required: "Category is required",
+      unique: true,
+      required: "email address is required",
     },
-    passWord: {
+    password: {
       type: String,
       required: "passWord is required",
     },
-    age: {
-      type: Number,
-      required: true,
-      min: 0,
-    },
-    houseAddress: {
-      type: String,
-      required: "houseAddress is required",
-    },
-    city: {
-      type: String,
-      required: "city is required",
-    },
-    nationality: {
-      type: String,
-      required: "nationality is required",
-    },
+    
   },
   {
     timestamps: true,
