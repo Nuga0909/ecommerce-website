@@ -66,7 +66,7 @@ export const postProduct = async (req, res) => {
       category: req.body.category,
       brand: req.body.brand,
       model: req.body.model,
-      image: req.file.location, // This line is changed to use file location from S3
+      image: req.file.location,
       price: req.body.price,
       inStock: req.body.inStock,
       description: sanitizedDescription,
