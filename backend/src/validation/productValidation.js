@@ -7,4 +7,5 @@ export const productValidationSchema = Joi.object({
   price: Joi.number().min(0).required(),
   inStock: Joi.number().default(0),
   description: Joi.string().trim().allow("", null),
+  imageName: Joi.string().required(),
 });

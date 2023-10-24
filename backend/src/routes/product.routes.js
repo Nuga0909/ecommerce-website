@@ -5,7 +5,7 @@ import {
   getSingleProduct,
   postProduct,
   updateProduct,
-  deleteProduct
+  deleteProduct,
 } from "../controller/products.controller.js";
 import multer from "multer";
 import path from "path";
@@ -18,7 +18,10 @@ const storage = multer.diskStorage({
     cb(null, path.join(__dirname, "../../uploads"));
   },
   filename: (req, file, cb) => {
-    cb(null, new Date().toISOString().replace(/:/g, "-") + file.originalname);
+    const fullFileName =
+      new Date().toISOString().replace(/:/g, "-") + file.originalname;
+    cb(null, fullFileName);
+    req.fullFileName = fullFileName; // Attach the filename to the request
   },
 });
 

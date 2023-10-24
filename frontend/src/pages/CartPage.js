@@ -1,98 +1,149 @@
-import React from "react";
-import close from "../assets/cart/Close.svg";
-import minus from "../assets/cart/minus.svg";
-import plus from "../assets/cart/plus.svg";
-import trash from "../assets/cart/trash-2.svg";
+import { Box, Button, Divider, IconButton, Typography } from "@mui/material";
+import { useSelector, useDispatch } from "react-redux";
+import CloseIcon from "@mui/icons-material/Close";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import styled from "@emotion/styled";
+import {
+  decreaseCount,
+  increaseCount,
+  removeFromCart,
+  setIsCartOpen,
+} from "../state/red.js";
+import { useNavigate } from "react-router-dom";
 
-function CartPage() {
+const FlexBox = styled(Box)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const CartMenu = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.cart);
+  const isCartOpen = useSelector((state) => state.cart.isCartOpen);
+
+  const totalPrice = cart.reduce((total, item) => {
+    return total + item.count * item.attributes.price;
+  }, 0);
+
   return (
-    <div className="">
-      <div className="absolute w-[605px] px-10 pt-8 pb-20 bg-white justify-start items-start gap-2.5 inline-flex z-50">
-        <div className="flex-col justify-start items-start gap-[100px] inline-flex">
-          <div className="flex-col justify-start items-start gap-8 flex">
-            <div className="flex-col justify-start items-start gap-6 flex">
-              <div className="justify-start items-start gap-[233px] inline-flex">
-                <div className="w-[268px] text-slate-950 text-xl font-semibold font-['Rubik'] leading-normal">
-                  Cart
-                </div>
-                <div className="w-6 h-6 relative">
-                  <img src={close} alt="" />
-                </div>
-              </div>
-            </div>
-            <div className="justify-start items-start gap-5 inline-flex">
-              <div className="p-[21px] bg-white rounded-3xl border border-gray-200 justify-start items-start gap-2.5 flex">
-                <img
-                  className="w-[88px] h-[88px] rounded-2xl"
-                  src="https://via.placeholder.com/88x88"
-                  alt=""
-                />
-              </div>
-              <div className="flex-col justify-start items-start gap-6 inline-flex">
-                <div className="flex-col justify-start items-start gap-4 flex">
-                  <div className="justify-start items-start gap-1 inline-flex">
-                    <div className="w-[268px] text-slate-950 text-xl font-semibold font-['Rubik'] leading-normal">
-                      Sopa Everyday Mask
-                    </div>
-                    <div className="w-[103px] text-right text-slate-950 text-xl font-semibold font-['Rubik'] leading-normal">
-                      $12.00
-                    </div>
-                  </div>
-                  <div className="flex-col justify-start items-start gap-3 flex">
-                    <div className="w-[268px] text-slate-500 text-lg font-normal font-['Rubik'] leading-snug">
-                      Color: Black
-                    </div>
-                    <div className="w-[268px] text-slate-500 text-lg font-normal font-['Rubik'] leading-snug">
-                      Size: Extra Extra Small
-                    </div>
-                  </div>
-                </div>
-                <div className="justify-start items-start gap-4 inline-flex">
-                  <div className="px-5 py-[11px] bg-white rounded-3xl border border-gray-200 flex-col justify-start items-start gap-2.5 inline-flex">
-                    <div className="justify-start items-center gap-4 inline-flex">
-                      <div className="w-5 h-5 relative">
-                        <img src={minus} alt="" />
-                      </div>
-                      <div className="w-[34px] text-center text-slate-950 text-xl font-semibold font-['Rubik'] leading-normal">
-                        1
-                      </div>
-                      <div className="w-5 h-5 relative">
-                        <img src={plus} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-[46px] h-[46px] relative">
-                    <div className="w-[46px] h-[46px] left-0 top-0 absolute bg-white rounded-full border border-gray-200" />
-                    <div className="w-5 h-5 left-[13px] top-[13px] absolute">
-                      <img src={trash} alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-[525px] h-[184px] flex-col justify-start items-start gap-20 inline-flex">
-            <div className="flex-col justify-start items-start gap-6 flex">
-              <div className="w-[525px] h-[0px] border border-gray-200"></div>
-              <div className="justify-start items-start gap-1 inline-flex">
-                <div className="w-[418px] text-slate-950 text-xl font-semibold font-['Rubik'] leading-normal">
-                  Subtotal
-                </div>
-                <div className="w-[103px] text-right text-slate-950 text-xl font-semibold font-['Rubik'] leading-normal">
-                  $12.00
-                </div>
-              </div>
-            </div>
-            <div className="w-[525px] px-10 py-[17px] bg-slate-950 rounded-[32px] justify-center items-start gap-2.5 inline-flex">
-              <div className="text-center text-white text-base font-normal font-['Rubik'] leading-snug">
-                Continue to Checkout
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+    <Box
+      display={isCartOpen ? "block" : "none"}
+      backgroundColor="rgba(0, 0, 0, 0.4)"
+      position="fixed"
+      zIndex={10}
+      width="100%"
+      height="100%"
+      left="0"
+      top="0"
+      overflow="auto"
+    >
+      <Box
+        position="fixed"
+        right="0"
+        bottom="0"
+        width="max(400px, 30%)"
+        height="100%"
+        backgroundColor="white"
+      >
+        <Box padding="30px" overflow="auto" height="100%">
+          {/* HEADER */}
+          <FlexBox mb="15px">
+            <Typography variant="h3">SHOPPING BAG ({cart.length})</Typography>
+            <IconButton onClick={() => dispatch(setIsCartOpen({}))}>
+              <CloseIcon />
+            </IconButton>
+          </FlexBox>
 
-export default CartPage;
+          {/* CART LIST */}
+          <Box>
+            {cart.map((item) => (
+              <Box key={`${item.attributes.name}-${item.id}`}>
+                <FlexBox p="15px 0">
+                  <Box flex="1 1 40%">
+                    <img
+                      alt={item?.name}
+                      width="123px"
+                      height="164px"
+                      src={`http://localhost:2000${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+                    />
+                  </Box>
+                  <Box flex="1 1 60%">
+                    <FlexBox mb="5px">
+                      <Typography fontWeight="bold">
+                        {item.attributes.name}
+                      </Typography>
+                      <IconButton
+                        onClick={() =>
+                          dispatch(removeFromCart({ id: item.id }))
+                        }
+                      >
+                        <CloseIcon />
+                      </IconButton>
+                    </FlexBox>
+                    <Typography>{item.attributes.shortDescription}</Typography>
+                    <FlexBox m="15px 0">
+                      <Box
+                        display="flex"
+                        alignItems="center"
+                        border={`1.5px solid "#cfcdcd"`}
+                      >
+                        <IconButton
+                          onClick={() =>
+                            dispatch(decreaseCount({ id: item.id }))
+                          }
+                        >
+                          <RemoveIcon />
+                        </IconButton>
+                        <Typography>{item.count}</Typography>
+                        <IconButton
+                          onClick={() =>
+                            dispatch(increaseCount({ id: item.id }))
+                          }
+                        >
+                          <AddIcon />
+                        </IconButton>
+                      </Box>
+                      <Typography fontWeight="bold">
+                        ${item.attributes.price}
+                      </Typography>
+                    </FlexBox>
+                  </Box>
+                </FlexBox>
+                <Divider />
+              </Box>
+            ))}
+          </Box>
+
+          {/* ACTIONS */}
+          <Box m="20px 0">
+            <FlexBox m="20px 0">
+              <Typography fontWeight="bold">SUBTOTAL</Typography>
+              <Typography fontWeight="bold">${totalPrice}</Typography>
+            </FlexBox>
+            <Button
+              sx={{
+                backgroundColor: "#333333",
+                color: "white",
+                borderRadius: 0,
+                minWidth: "100%",
+                padding: "20px 40px",
+                m: "20px 0",
+              }}
+              onClick={() => {
+                navigate("/checkout");
+                dispatch(setIsCartOpen({}));
+              }}
+            >
+              CHECKOUT
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default CartMenu;

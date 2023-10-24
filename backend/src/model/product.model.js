@@ -28,6 +28,10 @@ const productSchema = new mongoose.Schema(
       type: String,
       trim: true,
     },
+    imageName: {
+      type: String,
+      required: true,
+    }
   },
   {
     timestamps: true,

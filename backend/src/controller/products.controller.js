@@ -69,6 +69,7 @@ export const postProduct = async (req, res) => {
       price: req.body.price,
       inStock: req.body.inStock,
       description: sanitizedDescription,
+      imageName: req.fullFileName, // Change this line
     });
 
     await product.save();
@@ -111,6 +112,11 @@ export const updateProduct = async (req, res) => {
     product.inStock = req.body.inStock;
     product.description = sanitizedDescription;
 
+    if (req.file) {
+      // Only if a new file/image is uploaded
+      product.imageName = req.fullFileName;
+    }
+
     await product.save();
     res.status(200).json({
       message: "Product updated successfully",
@@ -124,6 +130,7 @@ export const updateProduct = async (req, res) => {
     });
   }
 };
+
 
 export const deleteProduct = async (req, res) => {
   try {

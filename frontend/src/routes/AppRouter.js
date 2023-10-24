@@ -7,6 +7,7 @@ import MenPage from "../pages/MenPage";
 import SignIn from "../pages/SignInPage";
 import CreateAccountPage from "../pages/CreateAccountPage";
 import ProductPreview from "../pages/ProductPreviewPage";
+import CartMenu from "../pages/CartPage";
 
 function AppRouter() {
   return (
@@ -21,6 +22,7 @@ function AppRouter() {
           <Route path="/product/:productId" element={<ProductPreview/>} />
           <Route path="*" element={() => "404 NOT FOUND"} />
         </Routes>
+        <CartMenu />
         <Footer />
       </div>
     </BrowserRouter>
