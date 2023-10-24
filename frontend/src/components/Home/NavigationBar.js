@@ -49,7 +49,7 @@ function NavigationBar() {
               </div>
               <div className="px-3 py-2 bg-white rounded-3xl border border-green-400 justify-start items-start gap-2.5 flex">
                 <div className="text-green-400 text-base font-normal font-['Rubik'] leading-snug">
-                  Shoe Finder Quiz
+                  Product Finder Quiz
                 </div>
               </div>
             </div>
