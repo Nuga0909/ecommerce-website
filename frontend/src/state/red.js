@@ -1,23 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  isCartOpen: true,
+  isCartOpen: false,
   cart: [],
   items: [],
   products: [], // <-- New state for products
   loadingProducts: false, // <-- New state to check if products are being loaded
   error: null, // <-- New state for any errors during fetch
+  selectedProduct: null,
 };
-
-export const selectProduct = (product) => ({
-  type: "SELECT_PRODUCT",
-  payload: product,
-});
 
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    selectProduct: (state, action) => {
+      state.selectedProduct = action.payload;
+    },
+
     setItems: (state, action) => {
       state.items = action.payload;
     },
@@ -77,6 +77,7 @@ export const {
   startFetchingProducts,
   productsFetched,
   productsFetchError,
+  selectProduct,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

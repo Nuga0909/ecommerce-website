@@ -5,11 +5,17 @@ import {
   startFetchingProducts,
   productsFetched,
   productsFetchError,
+  selectProduct,
 } from "../../state/red.js";
+import ProductPreview from "../../pages/ProductPreviewPage.js";
+import { useNavigate } from "react-router-dom";
+
 
 function ExploreShoes() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const products = useSelector((state) => state.cart.products);
+  const selectedProduct = useSelector((state) => state.cart.selectedProduct);
 
   useEffect(() => {
     dispatch(startFetchingProducts());
@@ -24,6 +30,11 @@ function ExploreShoes() {
         dispatch(productsFetchError(error.message));
       });
   }, [dispatch]);
+
+  const handleCardClick = (product) => {
+    dispatch(selectProduct(product)); // Store the selected product in state
+    navigate("/product-preview", { state: { product } }); // Navigate to PreviewHero page
+  };
 
   return (
     <div className="w-[1440px] h-[1346px] px-[135px] py-20 bg-white justify-start items-start gap-2.5 inline-flex">
@@ -47,7 +58,11 @@ function ExploreShoes() {
                 {products
                   .slice(rowIndex * 3, rowIndex * 3 + 3)
                   .map((product, idx) => (
-                    <div className="justify-start items-start flex" key={idx}>
+                    <div
+                      className="justify-start items-start flex"
+                      key={idx}
+                      onClick={() => handleCardClick(product)}
+                    >
                       <div className="px-6 pt-20 pb-6 bg-zinc-100 rounded-2xl justify-start items-start gap-2.5 flex">
                         <div className="flex-col justify-start items-start gap-20 inline-flex">
                           <img

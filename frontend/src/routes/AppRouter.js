@@ -19,7 +19,8 @@ function AppRouter() {
           <Route path="/men" element={<MenPage />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/create-account" element={<CreateAccountPage />} />
-          <Route path="/product/:productId" element={<ProductPreview/>} />
+          <Route path="/product-preview" element={<ProductPreview />} />
+          {/* <Route path="/product/:productId" element={<ProductPreview />} /> */}
           <Route path="*" element={() => "404 NOT FOUND"} />
         </Routes>
         <CartMenu />
