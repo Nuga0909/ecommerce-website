@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 function CreateAcc() {
   return (
@@ -46,7 +47,7 @@ function CreateAcc() {
               Already have an account?
             </div>
             <div className="text-center text-slate-950 text-base font-normal font-['Rubik'] underline leading-snug">
-              Sign in
+              <Link to="/signin">Sign in</Link>
             </div>
           </div>
         </div>
@@ -55,4 +56,4 @@ function CreateAcc() {
   );
 }
 
-export default CreateAcc
+export default CreateAcc;
