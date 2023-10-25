@@ -12,7 +12,10 @@ import { useNavigate } from "react-router-dom";
 function ExploreShoes() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.cart.products);
+  const products = useSelector((state) =>
+    state.cart.products.filter((product) => product.category === "Woman")
+  );
+
 
   useEffect(() => {
     dispatch(startFetchingProducts());
