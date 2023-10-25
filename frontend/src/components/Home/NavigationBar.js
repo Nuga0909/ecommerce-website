@@ -82,6 +82,7 @@ function NavigationBar() {
               <img
                 src={carti}
                 alt=""
+                style={{ cursor: "pointer" }}
                 onClick={() => dispatch(setIsCartOpen({}))}
               />
             </Badge>

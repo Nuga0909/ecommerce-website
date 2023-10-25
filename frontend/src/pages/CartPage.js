@@ -51,7 +51,7 @@ const CartMenu = () => {
         <Box padding="30px" overflow="auto" height="100%">
           {/* HEADER */}
           <FlexBox mb="15px">
-            <Typography variant="h3">SHOPPING BAG ({cart.length})</Typography>
+            <Typography variant="h5">SHOPPING BAG ({cart.length})</Typography>
             <IconButton onClick={() => dispatch(setIsCartOpen({}))}>
               <CloseIcon />
             </IconButton>
@@ -59,62 +59,77 @@ const CartMenu = () => {
 
           {/* CART LIST */}
           <Box>
-            {cart.map((product) => (
-              <Box key={`${product.productName}-${product.id}`}>
-                <FlexBox p="15px 0">
-                  <Box flex="1 1 40%">
-                    <img
-                      alt={product.productName}
-                      width="123px"
-                      height="164px"
-                      src={`http://localhost:3000/uploads/${product.imageName}`}
-                    />
-                  </Box>
-                  <Box flex="1 1 60%">
-                    <FlexBox mb="5px">
-                      <Typography fontWeight="bold">
-                        {product.productName}
-                      </Typography>
-                      <IconButton
-                        onClick={() =>
-                          dispatch(removeFromCart({ id: product.id }))
-                        }
-                      >
-                        <CloseIcon />
-                      </IconButton>
-                    </FlexBox>
-                    <Typography>{product.description}</Typography>
-                    <FlexBox m="15px 0">
-                      <Box
-                        display="flex"
-                        alignItems="center"
-                        border={`1.5px solid "#cfcdcd"`}
-                      >
-                        <IconButton
-                          onClick={() =>
-                            dispatch(decreaseCount({ id: product.id }))
-                          }
-                        >
-                          <RemoveIcon />
-                        </IconButton>
-                        <Typography>{product.count}</Typography>
-                        <IconButton
-                          onClick={() =>
-                            dispatch(increaseCount({ id: product.id }))
-                          }
-                        >
-                          <AddIcon />
-                        </IconButton>
+            {cart.length > 0 ? (
+              cart.map((product) => {
+                // Compute total price for each individual product based on count
+                const productTotalPrice = product.count * product.price;
+                return (
+                  <Box key={product._id}>
+                    <FlexBox p="15px 0">
+                      <Box flex="1 1 40%">
+                        <img
+                          alt={product.productName}
+                          width="123px"
+                          height="164px"
+                          src={`http://localhost:3000/uploads/${product.imageName}`}
+                        />
                       </Box>
-                      <Typography fontWeight="bold">
-                        ${product.price}
-                      </Typography>
+                      <Box flex="1 1 60%">
+                        <FlexBox mb="5px">
+                          <Typography fontWeight="bold">
+                            {product.productName}
+                          </Typography>
+                          <IconButton
+                            onClick={() =>
+                              dispatch(removeFromCart({ _id: product._id }))
+                            }
+                          >
+                            <CloseIcon />
+                          </IconButton>
+                        </FlexBox>
+                        <Typography>{product.description}</Typography>
+                        <FlexBox m="15px 0">
+                          <Box
+                            display="flex"
+                            alignItems="center"
+                            border={`1.5px solid "#cfcdcd"`}
+                          >
+                            <IconButton
+                              onClick={() =>
+                                dispatch(decreaseCount({ _id: product._id }))
+                              }
+                            >
+                              <RemoveIcon />
+                            </IconButton>
+                            <Typography>{product.count}</Typography>
+                            <IconButton
+                              onClick={() =>
+                                dispatch(increaseCount({ _id: product._id }))
+                              }
+                            >
+                              <AddIcon />
+                            </IconButton>
+                          </Box>
+                          <Typography fontWeight="bold">
+                            ${productTotalPrice}{" "}
+                            {/* Displaying computed total price here */}
+                          </Typography>
+                        </FlexBox>
+                      </Box>
                     </FlexBox>
+                    <Divider />
                   </Box>
-                </FlexBox>
-                <Divider />
-              </Box>
-            ))}
+                );
+              })
+            ) : (
+              <><Typography
+                  variant="h4"
+                  align="center"
+                  style={{ margin: "100px 0px", fontSize: "50px" }}
+                >
+                  Your cart is empty!
+                </Typography><Divider /></>
+            )}
           </Box>
 
           {/* ACTIONS */}

@@ -23,29 +23,36 @@ export const cartSlice = createSlice({
     },
 
     addToCart: (state, action) => {
-      state.cart = [...state.cart, action.payload.item];
+      // Check if the product is already in the cart
+      const existingProduct = state.cart.find(
+        (item) => item._id === action.payload.item._id
+      );
+
+      if (existingProduct) {
+        // Increase the count of the existing product by 1
+        existingProduct.count += 1;
+      } else {
+        // Add the new product with a count property
+        state.cart = [...state.cart, { ...action.payload.item, count: 1 }];
+      }
     },
 
     removeFromCart: (state, action) => {
-      state.cart = state.cart.filter((item) => item.id !== action.payload.id);
+      state.cart = state.cart.filter((item) => item._id !== action.payload._id);
     },
 
     increaseCount: (state, action) => {
-      state.cart = state.cart.map((item) => {
-        if (item.id === action.payload.id) {
-          item.count++;
-        }
-        return item;
-      });
+      const product = state.cart.find(
+        (item) => item._id === action.payload._id
+      );
+      if (product) product.count += 1;
     },
 
     decreaseCount: (state, action) => {
-      state.cart = state.cart.map((item) => {
-        if (item.id === action.payload.id && item.count > 1) {
-          item.count--;
-        }
-        return item;
-      });
+      const product = state.cart.find(
+        (item) => item._id === action.payload._id
+      );
+      if (product && product.count > 1) product.count -= 1;
     },
 
     setIsCartOpen: (state) => {

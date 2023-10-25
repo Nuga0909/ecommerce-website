@@ -10,11 +10,7 @@ function PreviewHero() {
   const product = location.state.product;
 
   const handleAddToBag = () => {
-    const cartItem = {
-      ...product,
-      count: 1,
-    };
-    dispatch(addToCart({ item: cartItem }));
+    dispatch(addToCart({ item: product }));
   };
 
   return (
