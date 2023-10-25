@@ -34,7 +34,7 @@ const products = useSelector((state) =>
     navigate("/product-preview", { state: { product } });
   };
   return (
-    <div className="w-[1440px] h-[1346px] px-[135px] py-20 bg-white justify-start items-start gap-2.5 inline-flex">
+    <div className="w-[1440px] px-[135px] py-20 bg-white justify-start items-start gap-2.5 inline-flex">
       <div className="flex-col justify-start items-center gap-8 inline-flex">
         <div className="justify-start items-center gap-[700px] inline-flex">
           <div className="w-[370px] text-slate-950 text-[28px] font-bold font-['Noto Serif'] leading-loose">
@@ -85,11 +85,6 @@ const products = useSelector((state) =>
               </div>
             </div>
           ))}
-        <div className="px-6 py-[17px] bg-lime-300 rounded-[32px] justify-center items-start gap-2.5 inline-flex">
-          <div className="w-[133px] text-center text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-            Shop Now
-          </div>
-        </div>
       </div>
     </div>
   );
