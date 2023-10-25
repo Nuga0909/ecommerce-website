@@ -1,21 +1,37 @@
 import React from "react";
 import star from "../../assets/star.svg";
+import { useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../state/red.js";
 
 function PreviewHero() {
+  const dispatch = useDispatch();
+  const location = useLocation();
+  const product = location.state.product;
+
+  const handleAddToBag = () => {
+    const cartItem = {
+      ...product,
+      count: 1,
+    };
+    dispatch(addToCart({ item: cartItem }));
+  };
+
   return (
     <div className="w-[1440px] h-[708px] px-[135px] pt-10 pb-20 bg-white flex-col justify-start items-start gap-2.5 inline-flex">
       <div className="justify-start items-start gap-[30px] inline-flex">
         <img
           className="w-[770px] h-[588px]"
-          src="https://via.placeholder.com/770x588"
-          alt=""
+          src={`http://localhost:3000/uploads/${product.imageName}`}
+          alt={product.productName}
         />
+
         <div className="flex-col justify-start items-start gap-[54px] inline-flex">
           <div className="flex-col justify-start items-start gap-[30px] flex">
             <div className="justify-end items-center gap-[70px] inline-flex">
               <div className="flex-col justify-start items-start gap-2 inline-flex">
                 <div className="w-[200px] text-slate-950 text-xl font-normal font-['Rubik'] leading-normal">
-                  Sopa Stretach Laces
+                  {product.productName}
                 </div>
                 <div className="justify-start items-center gap-2 inline-flex">
                   <div className="justify-start items-start gap-2 flex">
@@ -41,7 +57,7 @@ function PreviewHero() {
                 </div>
               </div>
               <div className="w-[100px] text-right text-slate-950 text-2xl font-bold font-['Noto Serif Lao'] leading-7">
-                $12
+                {`$${product.price}`}
               </div>
             </div>
             <div className="flex-col justify-start items-start gap-3 flex">
@@ -103,9 +119,12 @@ function PreviewHero() {
             </div>
             <div className="flex-col justify-start items-start gap-6 flex">
               <div className="flex-col justify-start items-center gap-4 flex">
-                <div className="w-[370px] px-6 py-[17px] bg-slate-950 rounded-[32px] justify-center items-start gap-2.5 inline-flex">
+                <div
+                  className="w-[370px] px-6 py-[17px] bg-slate-950 rounded-[32px] justify-center items-start gap-2.5 inline-flex cursor-pointer"
+                  onClick={handleAddToBag}
+                >
                   <div className="w-[133px] text-center text-white text-base font-normal font-['Rubik'] leading-snug">
-                    Add to bag $12
+                    {`Add to bag $${product.price}`}
                   </div>
                 </div>
                 <div className="pl-2.5 justify-end items-center gap-[17px] inline-flex">
@@ -134,11 +153,7 @@ function PreviewHero() {
                 </div>
               </div>
               <div className="w-[370px] text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-                Make putting on your shoes as easy as pulling on a T-shirt with
-                Sopa Stretch Laces - their unique stretching properties adapt to
-                your foot's movements and prevent getting untied, and now you
-                can customize with multiple vibrant colors in the right size for
-                your Sopa shoe
+                {product.description}
               </div>
             </div>
           </div>

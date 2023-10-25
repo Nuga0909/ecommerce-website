@@ -1,21 +1,19 @@
 import React from "react";
 import logo from "../../assets/cover.png";
-import cart from "../../assets/shopping-bag.jpg";
+import carti from "../../assets/shopping-bag.jpg";
 import user from "../../assets/user.jpg";
-import { useState } from "react";
-import CartPage from "../../pages/CartPage";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsCartOpen } from "../../state/red.js";
+import { Badge } from "@mui/material";
 
 function NavigationBar() {
-  const [showCart, setShowCart] = useState(false);
-
-  function handleShowCart() {
-    setShowCart(!showCart);
-  }
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.cart);
 
   return (
-    <div className="w-[1440px] h-32 pb-5 bg-white flex-col justify-start items-start gap-2.5 inline-flex">
-      <div className="flex-col justify-start items-center gap-5 flex">
+    <div className="w-[1440px] h-32 pb-5 bg-white flex-col justify-start items-start gap-2.5 inline-flex z-[10]">
+      <div className="h-32 flex-col justify-start items-center gap-5 flex fixed z-[10] bg-white">
         <div className="w-[1440px] p-2.5 bg-slate-950 justify-center items-start gap-2.5 inline-flex">
           <div className="text-white text-base font-normal font-['Rubik'] leading-snug">
             Free shipping to Nigeria on order of $80+
@@ -63,12 +61,28 @@ function NavigationBar() {
                 <img src={user} alt="" />
               </Link>
             </div>
-            <div className="w-6 h-6 relative">
-              <img src={cart} alt="" onClick={handleShowCart} />
-            </div>
+            <Badge
+              badgeContent={cart.length}
+              color="secondary"
+              invisible={cart.length === 0}
+              sx={{
+                "& .MuiBadge-badge": {
+                  right: 5,
+                  top: 5,
+                  padding: "0 4px",
+                  height: "14px",
+                  minWidth: "13px",
+                },
+              }}
+            >
+              <img
+                src={carti}
+                alt=""
+                onClick={() => dispatch(setIsCartOpen({}))}
+              />
+            </Badge>
           </div>
         </div>
-        {showCart && <CartPage />}
       </div>
     </div>
   );

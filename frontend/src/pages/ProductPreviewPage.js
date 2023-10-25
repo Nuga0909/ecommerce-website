@@ -7,10 +7,8 @@ import Footer from '../components/Home/Footer'
 function ProductPreview() {
   return (
       <div>
-          <NavigationBar />
           <PreviewHero />
           <RatingsReviews />
-          <Footer />
     </div>
   )
 }

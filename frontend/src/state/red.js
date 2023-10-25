@@ -4,12 +4,20 @@ const initialState = {
   isCartOpen: false,
   cart: [],
   items: [],
+  products: [], // <-- New state for products
+  loadingProducts: false, // <-- New state to check if products are being loaded
+  error: null, // <-- New state for any errors during fetch
+  selectedProduct: null,
 };
 
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    selectProduct: (state, action) => {
+      state.selectedProduct = action.payload;
+    },
+
     setItems: (state, action) => {
       state.items = action.payload;
     },
@@ -43,6 +51,19 @@ export const cartSlice = createSlice({
     setIsCartOpen: (state) => {
       state.isCartOpen = !state.isCartOpen;
     },
+
+    startFetchingProducts: (state) => {
+      state.loadingProducts = true;
+      state.error = null;
+    },
+    productsFetched: (state, action) => {
+      state.products = action.payload;
+      state.loadingProducts = false;
+    },
+    productsFetchError: (state, action) => {
+      state.loadingProducts = false;
+      state.error = action.payload;
+    },
   },
 });
 
@@ -53,6 +74,10 @@ export const {
   increaseCount,
   decreaseCount,
   setIsCartOpen,
+  startFetchingProducts,
+  productsFetched,
+  productsFetchError,
+  selectProduct,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

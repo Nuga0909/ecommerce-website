@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
-import cartReducer from "./state";
+import cartReducer from "./state/red.js";
 
 const store = configureStore({
   reducer: {

@@ -40,6 +40,10 @@ app.use(cors({
 
 app.use(logger('dev'));
 
+// Serve the static files from the "uploads" directory
+app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+console.log("Directory path:", path.join(__dirname, "../uploads"));
+
 app.use("/products", productRouter);
 app.use("/users", userRouter);
 
