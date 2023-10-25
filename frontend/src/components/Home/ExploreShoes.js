@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import {
@@ -7,15 +7,12 @@ import {
   productsFetchError,
   selectProduct,
 } from "../../state/red.js";
-import ProductPreview from "../../pages/ProductPreviewPage.js";
 import { useNavigate } from "react-router-dom";
-
 
 function ExploreShoes() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const products = useSelector((state) => state.cart.products);
-  const selectedProduct = useSelector((state) => state.cart.selectedProduct);
 
   useEffect(() => {
     dispatch(startFetchingProducts());
@@ -32,10 +29,9 @@ function ExploreShoes() {
   }, [dispatch]);
 
   const handleCardClick = (product) => {
-    dispatch(selectProduct(product)); // Store the selected product in state
-    navigate("/product-preview", { state: { product } }); // Navigate to PreviewHero page
+    dispatch(selectProduct(product));
+    navigate("/product-preview", { state: { product } });
   };
-
   return (
     <div className="w-[1440px] h-[1346px] px-[135px] py-20 bg-white justify-start items-start gap-2.5 inline-flex">
       <div className="flex-col justify-start items-center gap-8 inline-flex">
@@ -59,7 +55,7 @@ function ExploreShoes() {
                   .slice(rowIndex * 3, rowIndex * 3 + 3)
                   .map((product, idx) => (
                     <div
-                      className="justify-start items-start flex"
+                      className="justify-start items-start flex relative"
                       key={idx}
                       onClick={() => handleCardClick(product)}
                     >
@@ -70,6 +66,7 @@ function ExploreShoes() {
                             src={`http://localhost:3000/uploads/${product.imageName}`}
                             alt={product.productName}
                           />
+
                           <div className="flex-col justify-start items-start gap-2 flex">
                             <div className="w-[322px] text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
                               {product.productName}
