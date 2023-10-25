@@ -8,6 +8,8 @@ import SignIn from "../pages/SignInPage";
 import CreateAccountPage from "../pages/CreateAccountPage";
 import ProductPreview from "../pages/ProductPreviewPage";
 import CartMenu from "../pages/CartPage";
+import WomenPage from "../pages/WomenPage";
+import BackpacksPage from "../pages/BackpacksPage";
 
 function AppRouter() {
   return (
@@ -16,7 +18,10 @@ function AppRouter() {
         <NavigationBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/men" element={<MenPage />} />
+          <Route path="/man" element={<MenPage />} />
+          <Route path="/woman" element={<WomenPage />} />
+          <Route path="/bags" element={<BackpacksPage />} />
+
           <Route path="/signin" element={<SignIn />} />
           <Route path="/create-account" element={<CreateAccountPage />} />
           <Route path="/product-preview" element={<ProductPreview />} />

@@ -9,11 +9,11 @@ import {
 } from "../../state/red.js";
 import { useNavigate } from "react-router-dom";
 
-function Man() {
+function Bags() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const products = useSelector((state) =>
-    state.cart.products.filter((product) => product.category === "Man")
+    state.cart.products.filter((product) => product.category === "Bags")
   );
 
   useEffect(() => {
@@ -99,4 +99,4 @@ function Man() {
   );
 }
 
-export default Man;
+export default Bags;
