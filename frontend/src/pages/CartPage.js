@@ -122,13 +122,16 @@ const CartMenu = () => {
                 );
               })
             ) : (
-              <><Typography
+              <>
+                <Typography
                   variant="h4"
                   align="center"
                   style={{ margin: "100px 0px", fontSize: "50px" }}
                 >
                   Your cart is empty!
-                </Typography><Divider /></>
+                </Typography>
+                <Divider />
+              </>
             )}
           </Box>
 
@@ -141,7 +144,7 @@ const CartMenu = () => {
             <Button
               sx={{
                 backgroundColor: "#333333",
-                color: "white",
+                color: "#FE7B1E",
                 borderRadius: 0,
                 minWidth: "100%",
                 padding: "20px 40px",

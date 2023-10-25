@@ -31,33 +31,33 @@ function NavigationBar() {
               </div>
             </div>
             <div className="justify-start items-center gap-6 flex">
-              <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-                <Link className="man" to="/man">
+              <Link className="man" to="/man">
+                <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug hover:bg-zinc-100">
                   Men
-                </Link>
-              </div>
-              <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-                <Link className="woman" to="/woman">
+                </div>
+              </Link>
+              <Link className="woman" to="/woman">
+                <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug hover:bg-zinc-100">
                   Women
-                </Link>
-              </div>
-              <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-                <Link className="bags" to="/bags">
+                </div>
+              </Link>
+              <Link className="bags" to="/bags">
+                <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug hover:bg-zinc-100">
                   Backpacks
-                </Link>
-              </div>
-              <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
+                </div>
+              </Link>
+              <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug hover:bg-zinc-100">
                 About
               </div>
               <div className="px-3 py-2 bg-white rounded-3xl border border-green-400 justify-start items-start gap-2.5 flex">
-                <div className="text-green-400 text-base font-normal font-['Rubik'] leading-snug">
+                <div className="text-green-400 text-base font-normal font-['Rubik'] leading-snug ">
                   Product Finder Quiz
                 </div>
               </div>
             </div>
           </div>
           <div className="justify-start items-center gap-6 flex">
-            <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
+            <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug hover:bg-zinc-100">
               Support
             </div>
             <div className="w-6 h-6 relative">
