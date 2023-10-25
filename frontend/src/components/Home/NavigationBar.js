@@ -32,15 +32,19 @@ function NavigationBar() {
             </div>
             <div className="justify-start items-center gap-6 flex">
               <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-                <Link className="men" to="/men">
+                <Link className="man" to="/man">
                   Men
                 </Link>
               </div>
               <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-                Bags
+                <Link className="woman" to="/woman">
+                  Women
+                </Link>
               </div>
               <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-                Accessories
+                <Link className="bags" to="/bags">
+                  Backpacks
+                </Link>
               </div>
               <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
                 About
@@ -78,6 +82,7 @@ function NavigationBar() {
               <img
                 src={carti}
                 alt=""
+                style={{ cursor: "pointer" }}
                 onClick={() => dispatch(setIsCartOpen({}))}
               />
             </Badge>

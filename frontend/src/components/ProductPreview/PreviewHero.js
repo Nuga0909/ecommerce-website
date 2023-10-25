@@ -10,18 +10,14 @@ function PreviewHero() {
   const product = location.state.product;
 
   const handleAddToBag = () => {
-    const cartItem = {
-      ...product,
-      count: 1,
-    };
-    dispatch(addToCart({ item: cartItem }));
+    dispatch(addToCart({ item: product }));
   };
 
   return (
     <div className="w-[1440px] h-[708px] px-[135px] pt-10 pb-20 bg-white flex-col justify-start items-start gap-2.5 inline-flex">
       <div className="justify-start items-start gap-[30px] inline-flex">
         <img
-          className="w-[770px] h-[588px]"
+          className="w-[770px] h-[588px] object-contain"
           src={`http://localhost:3000/uploads/${product.imageName}`}
           alt={product.productName}
         />

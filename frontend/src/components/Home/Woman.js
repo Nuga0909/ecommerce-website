@@ -1,20 +1,22 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import {
   startFetchingProducts,
   productsFetched,
   productsFetchError,
   selectProduct,
-} from "../state/red.js";
+} from "../../state/red.js";
 import { useNavigate } from "react-router-dom";
 
-function MenPage() {
+function Woman() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-const products = useSelector((state) =>
-  state.cart.products.filter((product) => product.category === "Man")
-);
+  const products = useSelector((state) =>
+    state.cart.products.filter((product) => product.category === "Woman")
+  );
+
   useEffect(() => {
     dispatch(startFetchingProducts());
 
@@ -38,7 +40,12 @@ const products = useSelector((state) =>
       <div className="flex-col justify-start items-center gap-8 inline-flex">
         <div className="justify-start items-center gap-[700px] inline-flex">
           <div className="w-[370px] text-slate-950 text-[28px] font-bold font-['Noto Serif'] leading-loose">
-            Men Wears
+            Women Wears
+          </div>
+          <div className="w-[100px] text-right text-slate-950 text-base font-normal font-['Rubik'] underline leading-snug">
+            <Link className="woman" to="/woman">
+              Shop Now
+            </Link>
           </div>
         </div>
         {Array(2)
@@ -85,9 +92,17 @@ const products = useSelector((state) =>
               </div>
             </div>
           ))}
+        <Link className="woman" to="/woman">
+          {" "}
+          <div className="px-6 py-[17px] bg-lime-300 rounded-[32px] justify-center items-start gap-2.5 inline-flex">
+            <div className="w-[133px] text-center text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
+              Shop Now
+            </div>
+          </div>
+        </Link>
       </div>
     </div>
   );
 }
 
-export default MenPage;
+export default Woman;
