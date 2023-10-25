@@ -17,7 +17,7 @@ function SignInSnipet() {
             </div>
             <div className="w-[470px] px-6 py-[17px] bg-slate-950 rounded-[32px] justify-center items-start gap-2.5 inline-flex">
               <div className="text-center text-white text-base font-normal font-['Rubik'] leading-snug">
-                Email me a login link
+                Sign in
               </div>
             </div>
           </div>
