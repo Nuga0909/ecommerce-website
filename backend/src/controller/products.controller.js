@@ -69,7 +69,7 @@ export const postProduct = async (req, res) => {
       price: req.body.price,
       inStock: req.body.inStock,
       description: sanitizedDescription,
-      imageName: req.fullFileName, // Change this line
+      imageName: req.fullFileName,
     });
 
     await product.save();

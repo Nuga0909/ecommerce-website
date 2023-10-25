@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// Create a schema for the shoe
+// Create a schema for user
 const userSchema = new mongoose.Schema(
   {
     firstName: {

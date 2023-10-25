@@ -112,7 +112,6 @@ const CartMenu = () => {
                           </Box>
                           <Typography fontWeight="bold">
                             ${productTotalPrice}{" "}
-                            {/* Displaying computed total price here */}
                           </Typography>
                         </FlexBox>
                       </Box>
