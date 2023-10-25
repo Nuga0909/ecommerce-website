@@ -7,14 +7,15 @@ function Hero() {
       <div className="w-[1170px] h-[657px] relative">
         <img
           className="w-[1170px] h-[657px] left-0 top-0 absolute rounded-2xl"
-          src={hero} alt=''
+          src={hero}
+          alt=""
         />
         <div className="w-[1090px] h-[346px] left-[40px] top-[309px] absolute flex-col justify-start items-center gap-4 inline-flex">
           <div className="flex-col justify-start items-start gap-10 flex">
             <div className="w-[1090px] text-white text-[66px] font-bold font-['Noto Serif'] leading-[74px]">
+              This is Eko! <br />
               Step inside, for <br />
-              comfort and magic <br />
-              await you.
+              comfort and magic.
             </div>
             <div className="px-6 py-[17px] bg-lime-300 rounded-[32px] justify-center items-start gap-2.5 inline-flex">
               <div className="w-[133px] text-center text-slate-950 text-base font-normal font-['Rubik'] leading-snug">

@@ -1,5 +1,6 @@
 import React from 'react';
-import bag1 from '../../assets/bag1.webp'
+import bag1 from '../../assets/bag1.webp';
+import hype from "../../assets/Photobb.png";
 
 function TheHype() {
   return (
@@ -18,7 +19,7 @@ function TheHype() {
               <div className="flex-col justify-start items-center gap-6 inline-flex">
                 <div className="justify-start items-center gap-3 inline-flex">
                   <div className="text-center text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-                    borkat u.
+                    Olamide says...
                   </div>
                   <div className="justify-start items-start gap-2 flex">
                     <div className="w-5 h-5 relative" />
@@ -41,7 +42,7 @@ function TheHype() {
           <div className="flex-col justify-start items-center gap-[63px] inline-flex">
             <img
               className="w-[370px] h-[498px] rounded-tl-2xl rounded-tr-2xl"
-              src="https://via.placeholder.com/370x498" alt=''
+              src={hype} alt=''
             />
             <div className="justify-start items-start gap-4 inline-flex">
               <div className="flex-col justify-start items-start gap-2 inline-flex">
