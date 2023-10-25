@@ -1,7 +1,8 @@
 import React from 'react';
 import img from '../../assets/Photo5.png';
 import img1 from "../../assets/slider-image-02.webp";
-import img2 from '../../assets/collection_box_img_1.webp'
+// eslint-disable-next-line
+import img2 from '../../assets/collection_box_img_1.webp';
 
 
 function IntroducingModel() {
@@ -100,7 +101,6 @@ function IntroducingModel() {
             </div>
           </div>
         </div>
-        {/* <div className="flex-col justify-start items-start gap-10 flex">
           <div className="w-[1170px] text-white text-[28px] font-bold font-['Noto Serif Lao'] leading-loose">
             Accessoies
           </div>
