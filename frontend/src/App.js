@@ -12,12 +12,6 @@ function App() {
   return (
     <div>
       <AppRouter/>
-      {/* <HomePage /> */}
-      {/* <ProductPreview /> */}
-      {/* <SignIn /> */}
-      {/* <CreateAccountPage /> */}
-      {/* <MenPage /> */}
-      {/* <CartPage /> */}
     </div>
   );
 }
