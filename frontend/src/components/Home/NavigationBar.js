@@ -12,8 +12,8 @@ function NavigationBar() {
   const cart = useSelector((state) => state.cart.cart);
 
   return (
-    <div className="w-[1440px] h-32 pb-5 bg-white flex-col justify-start items-start gap-2.5 inline-flex">
-      <div className="flex-col justify-start items-center gap-5 flex">
+    <div className="w-[1440px] h-32 pb-5 bg-white flex-col justify-start items-start gap-2.5 inline-flex z-[10]">
+      <div className="h-32 flex-col justify-start items-center gap-5 flex fixed z-[10] bg-white">
         <div className="w-[1440px] p-2.5 bg-slate-950 justify-center items-start gap-2.5 inline-flex">
           <div className="text-white text-base font-normal font-['Rubik'] leading-snug">
             Free shipping to Nigeria on order of $80+
