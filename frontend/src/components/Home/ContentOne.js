@@ -8,7 +8,7 @@ function ContentOne() {
       <div className="px-[100px] py-20 bg-zinc-100 rounded-3xl flex-col justify-start items-start gap-2.5 flex">
         <div className="flex-col justify-start items-center gap-[60px] flex">
           <div className="w-[970px] text-center text-slate-950 text-[40px] font-bold font-['Noto Serif'] leading-[46px]">
-            “These are the most thoughtfully designed sneakers on the market.”
+            “They have the most thoughtfully designed wears in Africa.”
           </div>
           <div className="justify-start items-center gap-[187px] inline-flex">
             <div className="w-56 h-[57px] relative" ><img src={vogue} alt="" /></div>

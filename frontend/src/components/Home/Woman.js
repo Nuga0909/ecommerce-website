@@ -64,7 +64,7 @@ function Woman() {
                       key={idx}
                       onClick={() => handleCardClick(product)}
                     >
-                      <div className="px-6 pt-20 pb-6 bg-zinc-100 rounded-2xl justify-start items-start gap-2.5 flex">
+                      <div className="px-6 pt-20 pb-6 bg-zinc-100 rounded-2xl justify-start items-start gap-2.5 flex hover:bg-yellow-100">
                         <div className="flex-col justify-start items-start gap-20 inline-flex">
                           <img
                             className="w-full h-auto object-cover rounded-2xl" // ensures images are not distorted
@@ -94,7 +94,7 @@ function Woman() {
           ))}
         <Link className="woman" to="/woman">
           {" "}
-          <div className="px-6 py-[17px] bg-lime-300 rounded-[32px] justify-center items-start gap-2.5 inline-flex">
+          <div className="px-6 py-[17px] bg-lime-300 rounded-[32px] justify-center items-start gap-2.5 inline-flex hover:bg-green-400">
             <div className="w-[133px] text-center text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
               Shop Now
             </div>

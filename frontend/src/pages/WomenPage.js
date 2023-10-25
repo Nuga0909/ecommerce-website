@@ -57,7 +57,7 @@ function WomenPage() {
                       key={idx}
                       onClick={() => handleCardClick(product)}
                     >
-                      <div className="px-6 pt-20 pb-6 bg-zinc-100 rounded-2xl justify-start items-start gap-2.5 flex">
+                      <div className="px-6 pt-20 pb-6 bg-zinc-100 rounded-2xl justify-start items-start gap-2.5 flex hover:bg-yellow-100">
                         <div className="flex-col justify-start items-start gap-20 inline-flex">
                           <img
                             className="w-full h-auto object-cover rounded-2xl" // ensures images are not distorted

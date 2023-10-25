@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// Create a schema for the shoe
+// Create a schema for product
 const productSchema = new mongoose.Schema(
   {
     category: {

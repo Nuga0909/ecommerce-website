@@ -116,7 +116,7 @@ function PreviewHero() {
             <div className="flex-col justify-start items-start gap-6 flex">
               <div className="flex-col justify-start items-center gap-4 flex">
                 <div
-                  className="w-[370px] px-6 py-[17px] bg-slate-950 rounded-[32px] justify-center items-start gap-2.5 inline-flex cursor-pointer"
+                  className="w-[370px] px-6 py-[17px] bg-slate-950 rounded-[32px] hover:bg-slate-500 justify-center items-start gap-2.5 inline-flex cursor-pointer"
                   onClick={handleAddToBag}
                 >
                   <div className="w-[133px] text-center text-white text-base font-normal font-['Rubik'] leading-snug">

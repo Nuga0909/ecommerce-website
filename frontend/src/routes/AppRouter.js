@@ -11,6 +11,7 @@ import ProductPreview from "../pages/ProductPreviewPage";
 import CartMenu from "../pages/CartPage";
 import WomenPage from "../pages/WomenPage";
 import BackpacksPage from "../pages/BackpacksPage";
+import YourOrderPage from "../pages/YourOrderPage";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -37,6 +38,8 @@ function AppRouter() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/create-account" element={<CreateAccountPage />} />
           <Route path="/product-preview" element={<ProductPreview />} />
+          <Route path="/your-order-page" element={<YourOrderPage />} />
+
           <Route path="*" element={() => "404 NOT FOUND"} />
         </Routes>
         <CartMenu />
