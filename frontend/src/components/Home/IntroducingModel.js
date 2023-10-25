@@ -6,7 +6,7 @@ import img2 from '../../assets/collection_box_img_1.webp'
 
 function IntroducingModel() {
   return (
-    <div className="w-[1440px] h-[3234px] px-[135px] py-20 bg-slate-950 justify-start items-start gap-2.5 inline-flex">
+    <div className="w-[1440px] px-[135px] py-20 bg-slate-950 justify-start items-start gap-2.5 inline-flex">
       <div className="flex-col justify-start items-start gap-20 inline-flex">
         <div className="flex-col justify-start items-start gap-10 flex">
           <div className="flex-col justify-start items-center gap-12 flex">
@@ -100,7 +100,7 @@ function IntroducingModel() {
             </div>
           </div>
         </div>
-        <div className="flex-col justify-start items-start gap-10 flex">
+        {/* <div className="flex-col justify-start items-start gap-10 flex">
           <div className="w-[1170px] text-white text-[28px] font-bold font-['Noto Serif Lao'] leading-loose">
             Accessoies
           </div>
@@ -175,7 +175,7 @@ function IntroducingModel() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

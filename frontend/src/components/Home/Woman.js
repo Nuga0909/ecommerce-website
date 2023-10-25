@@ -9,7 +9,7 @@ import {
 } from "../../state/red.js";
 import { useNavigate } from "react-router-dom";
 
-function ExploreShoes() {
+function Woman() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const products = useSelector((state) =>
@@ -100,4 +100,4 @@ function ExploreShoes() {
   );
 }
 
-export default ExploreShoes;
+export default Woman;
