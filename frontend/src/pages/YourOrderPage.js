@@ -1,12 +1,16 @@
-import React from 'react'
+import React from "react";
+import { useLocation } from "react-router-dom";
 
 function YourOrderPage() {
+  const location = useLocation();
+  const firstName = location.state ? location.state.firstName : "User"; // Use 'User' as a fallback
+
   return (
     <div className="w-[1440px] h-[666px] pl-[535px] pr-[233px] py-20 flex-col justify-start items-start gap-2.5 inline-flex">
       <div className="h-[278px] flex-col justify-start items-start gap-12 flex">
         <div className="flex-col justify-start items-start gap-8 flex">
-          <div className="w-[370px] text-slate-950 text-5xl font-bold font-['Noto Serif Lao'] leading-[56px]">
-            Your orders
+          <div className="w-[770px] text-slate-950 text-5xl font-bold font-['Noto Serif Lao'] leading-[56px]">
+            WELCOME {firstName}!
           </div>
           <div className="justify-start items-center gap-4 inline-flex">
             <div className="text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
@@ -26,7 +30,7 @@ function YourOrderPage() {
           </div>
           <div className="w-[270px] px-6 py-[17px] rounded-[32px] border-2 border-gray-200 justify-center items-start gap-2.5 inline-flex">
             <div className="w-[133px] text-center text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-              Start Shopping
+              Continue Shopping
             </div>
           </div>
         </div>
@@ -35,4 +39,4 @@ function YourOrderPage() {
   );
 }
 
-export default YourOrderPage
+export default YourOrderPage;
