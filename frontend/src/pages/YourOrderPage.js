@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function YourOrderPage() {
   const location = useLocation();
@@ -28,9 +28,9 @@ function YourOrderPage() {
           <div className="w-[370px] text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
             You haven’t placed any orders in this period.
           </div>
-          <div className="w-[270px] px-6 py-[17px] rounded-[32px] border-2 border-gray-200 justify-center items-start gap-2.5 inline-flex">
+          <div className="w-[270px] px-6 py-[17px] rounded-[32px] border-2 border-gray-200 justify-center items-start gap-2.5 inline-flex cursur-pointer hover:bg-green-400">
             <div className="w-[133px] text-center text-slate-950 text-base font-normal font-['Rubik'] leading-snug">
-              Continue Shopping
+              <Link to="/">Continue Shopping</Link>
             </div>
           </div>
         </div>
