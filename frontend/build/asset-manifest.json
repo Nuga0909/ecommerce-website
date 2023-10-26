@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8ae77fb1.css",
+    "main.js": "/static/js/main.16454359.js",
+    "static/media/Hero Image.jpg": "/static/media/Hero Image.2173606ad6db313ee50c.jpg",
+    "static/media/Photo.png": "/static/media/Photo.b506336e33ce975ee0d8.png",
+    "static/media/Photobb.png": "/static/media/Photobb.1b3cda4a5b26fd514b79.png",
+    "static/media/Photo4.png": "/static/media/Photo4.0fc4a052cf95bbece4ce.png",
+    "static/media/Photo(2).png": "/static/media/Photo(2).c801837990ff6724b6dc.png",
+    "static/media/Photo3.png": "/static/media/Photo3.7721aec1c449dacf660c.png",
+    "static/media/cover.png": "/static/media/cover.fbaa12d73cdc53e7e710.png",
+    "static/media/fggg.jpg": "/static/media/fggg.7cd7526fc77996914b00.jpg",
+    "static/media/bag1.webp": "/static/media/bag1.7227bd7e3268072a2a6d.webp",
+    "static/media/vogue-logo.jpg": "/static/media/vogue-logo.4cb11efd0155ba21ca66.jpg",
+    "static/media/banner-02.webp": "/static/media/banner-02.6585cda08e35a205f238.webp",
+    "index.html": "/index.html",
+    "static/media/star.svg": "/static/media/star.7e65d424dbfdcf12718213fb5bce11d4.svg",
+    "main.8ae77fb1.css.map": "/static/css/main.8ae77fb1.css.map",
+    "main.16454359.js.map": "/static/js/main.16454359.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ae77fb1.css",
+    "static/js/main.16454359.js"
+  ]
+}
