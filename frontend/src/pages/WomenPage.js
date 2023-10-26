@@ -38,7 +38,7 @@ function WomenPage() {
       <div className="flex-col justify-start items-center gap-8 inline-flex">
         <div className="justify-start items-center gap-[700px] inline-flex">
           <div className="w-[370px] text-slate-950 text-[28px] font-bold font-['Noto Serif'] leading-loose">
-            Men Wears
+            Women Wears
           </div>
         </div>
         {Array(2)

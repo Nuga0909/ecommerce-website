@@ -38,7 +38,7 @@ function BackpacksPage() {
       <div className="flex-col justify-start items-center gap-8 inline-flex">
         <div className="justify-start items-center gap-[700px] inline-flex">
           <div className="w-[370px] text-slate-950 text-[28px] font-bold font-['Noto Serif'] leading-loose">
-            Men Wears
+            Backpacks
           </div>
         </div>
         {Array(2)
