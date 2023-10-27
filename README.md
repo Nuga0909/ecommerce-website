@@ -27,7 +27,7 @@
  Frontend: Reactjs, Redux 
  Backend: node.js, Mongodb, Mongoose, Express js
  Authentication: Javascript Web Token (JWT)
- Other tools: Render, Multer, Joi 
+ Other tools: Render, Multer, Joi, Cloudinary
 
   ```
   
