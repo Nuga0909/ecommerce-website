@@ -1,5 +1,4 @@
 import express from "express";
-const router = express.Router();
 import {
   getAllProducts,
   getSingleProduct,
@@ -8,24 +7,41 @@ import {
   deleteProduct,
 } from "../controller/products.controller.js";
 import multer from "multer";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
+import cloudinary from "cloudinary";
 import path from "path";
 import { fileURLToPath } from "url";
+import dotenv from "dotenv";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const envPath = path.resolve(__dirname, "../../config/.env");
+dotenv.config({ path: envPath });
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, "../../uploads"));
-  },
-  filename: (req, file, cb) => {
-    const fullFileName =
-      new Date().toISOString().replace(/:/g, "-") + file.originalname;
-    cb(null, fullFileName);
-    req.fullFileName = fullFileName; // Attach the filename to the request
+console.log(process.env.CLOUDINARY_API_SECRET);
+
+cloudinary.v2.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary.v2,
+  params: {
+    folder: "ooja images", // Replace with your folder name
+    format: async (req, file) => "png", // or the format you will be using
+    public_id: (req, file) => {
+      const fullFileName =
+        new Date().toISOString().replace(/:/g, "-") + file.originalname;
+      req.fullFileName = fullFileName;
+      return fullFileName;
+    },
   },
 });
 
 const upload = multer({ storage: storage });
+
+const router = express.Router();
 
 router.get("/all", getAllProducts);
 

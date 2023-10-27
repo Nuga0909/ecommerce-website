@@ -65,7 +65,7 @@ export const postProduct = async (req, res) => {
     const product = new Product({
       category: req.body.category,
       productName: req.body.productName,
-      image: req.file.location,
+      image: req.file.path,
       price: req.body.price,
       inStock: req.body.inStock,
       description: sanitizedDescription,
@@ -107,7 +107,7 @@ export const updateProduct = async (req, res) => {
 
     product.category = req.body.category;
     product.productName = req.body.productName;
-    product.image = req.file.location;
+    product.image = req.file.path;
     product.price = req.body.price;
     product.inStock = req.body.inStock;
     product.description = sanitizedDescription;

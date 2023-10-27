@@ -71,7 +71,7 @@ const CartMenu = () => {
                           alt={product.productName}
                           width="123px"
                           height="164px"
-                          src={`http://localhost:3000/uploads/${product.imageName}`}
+                          src={`https://res.cloudinary.com/dngxpu5bh/image/upload/v1698400355/ooja%20images/${product.imageName}.png`}
                         />
                       </Box>
                       <Box flex="1 1 60%">

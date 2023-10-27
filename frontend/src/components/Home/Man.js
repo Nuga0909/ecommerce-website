@@ -68,7 +68,7 @@ function Man() {
                         <div className="flex-col justify-start items-start gap-20 inline-flex">
                           <img
                             className="w-full h-auto object-cover rounded-2xl" // ensures images are not distorted
-                            src={`http://localhost:3000/uploads/${product.imageName}`}
+                            src={`https://res.cloudinary.com/dngxpu5bh/image/upload/v1698400355/ooja%20images/${product.imageName}.png`}
                             alt={product.productName}
                           />
 

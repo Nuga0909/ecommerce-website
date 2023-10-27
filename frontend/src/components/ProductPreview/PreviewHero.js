@@ -18,7 +18,7 @@ function PreviewHero() {
       <div className="justify-start items-start gap-[30px] inline-flex">
         <img
           className="w-[770px] h-[588px] object-contain"
-          src={`http://localhost:3000/uploads/${product.imageName}`}
+          src={`https://res.cloudinary.com/dngxpu5bh/image/upload/v1698400355/ooja%20images/${product.imageName}.png`}
           alt={product.productName}
         />
 
