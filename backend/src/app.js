@@ -17,6 +17,7 @@ const envPath = path.resolve(__dirname, '../config/.env');
 dotenv.config({ path: envPath });
 
 const URI = process.env.MONGODB_URI;
+console.log(URI);
 
 mongoose.connect(URI, {
     useNewUrlParser: true,
